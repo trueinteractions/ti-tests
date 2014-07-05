@@ -1,0 +1,15 @@
+{
+	"main": "webgl_cubes.html",
+	"notaskbar": false
+,	"name": "Tint Compiler",
+	"webkit": {
+		"plugin":true
+	},
+	"window": {
+		"toolbar": false,
+		"width": 800,
+		"height": 500,
+		"frame": true,
+		"transparent": false
+	}
+}

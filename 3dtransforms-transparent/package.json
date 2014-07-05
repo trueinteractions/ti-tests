@@ -1,0 +1,16 @@
+{
+	"main": "3dtest.html",
+	"notaskbar": false
+,	"name": "Tint Compiler",
+	"webkit": {
+		"plugin":true
+	},
+	"window": {
+		"toolbar": false,
+		"width": 500,
+		"height": 500,
+		"show": true,
+		"frame": true,
+		"transparent": true
+	}
+}

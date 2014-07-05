@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ocean Wave Simulation</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="waves.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body style="background-color:transparent !important;">
+        <div id="overlay" style="background-color:transparent !important;"></div>
+        <div id="ui" style="background-color:transparent !important;;">
+            <div id="camera" style="background-color:transparent !important;;">
+                <canvas id="profile" width="350" height="105" style="background-color:transparent !important;;"></canvas>
+                <div id="length" style="background-color:transparent !important;;"></div>
+                <div id="end" style="background-color:transparent !important;;"></div>
+                <div id="wind" style="background-color:transparent !important;;">
+                    <span id="wind-speed" style="background-color:transparent !important;;"></span><span id="wind-unit"> m/s</span>
+                    <div id="wind-label">WIND</div>
+                </div>
+
+                <div id="size">
+                    <span id="size-value"></span><span id="size-unit"> m</span>
+                </div>
+                <div id="size-label">SIZE</div>
+                <div id="choppiness"></div>
+                <div id="choppiness-label">CHOPPINESS</div>
+            </div>
+        </div>
+        <canvas id="simulator" style="background-color:transparent !important;"></canvas>
+
+        <div id="error">Your browser does not appear to support the required technologies. You can still view this on <a href="http://youtu.be/IrUehq6vJss">YouTube</a>.</div>
+
+        <script src="waves.js"></script>
+    </body>
+</html>

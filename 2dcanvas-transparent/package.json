@@ -1,0 +1,16 @@
+{
+	"main": "index.html",
+	"notaskbar": false
+,	"name": "Tint Compiler",
+	"webkit": {
+		"plugin":false
+	},
+	"window": {
+		"toolbar": false,
+		"width": 500,
+		"height": 500,
+		"show": true,
+		"frame": false,
+		"transparent":true		
+	}
+}

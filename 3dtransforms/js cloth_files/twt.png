@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<title>404 Not Found</title>
+</head>
+
+<body bgcolor=#ffffff>
+
+<table width=600>
+<tr>
+  <td>
+
+<font face="Arial, Univers 55, Helvetica">
+<h1>Document not found</h1>
+
+The requested document was not found on this server.  This could be
+for a variety of reasons, including:
+
+<ul>
+  <li>You followed a broken or out-of-date link. 
+  <li>You entered the URL incorrectly. 
+  <li>The file no longer exists.
+</ul>
+
+If you followed a broken link, please inform the owner of the
+referring document.
+
+<p>
+
+<p>
+<center>
+<a href="http://www.auone-net.jp/"><img src="/images/kddi_c.gif" alt="" border=0>
+</a>
+</center>
+
+</font>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

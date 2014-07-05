@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)http://www.dhs.state.il.us/accessibility/tests/flash/video.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Flash Video Example</title>
+	<style type="text/css">
+		body { font-family: Verdana, Arial, sans-serif; font-size: 80%; text-align: center; }
+		h1 { font-size: 200%; margin: 5em 0 .25em 0; }
+		p { margin: .5em 0; }
+	</style>
+	<script type="text/javascript">
+	TIWindow.getFromDOMWindow({domwindow:window}).showDebugWindow();
+	</script>
+</head>
+<body>
+<div>
+	<h1>Flash Video Example</h1>
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="320" height="280">
+		<param name="movie" value="video.swf">
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="http://www.dhs.state.il.us/accessibility/tests/flash/video.swf" width="320" height="280">
+		<!--<![endif]-->
+			<param name="quality" value="high">
+			<param name="wmode" value="window">
+			<!-- important: wmode must be set to window for screen readers to see the object
+				 and for keyboard navigation to work correctly -->
+			<div class="object-content">
+				<p>Please install or enable <a href="http://get.adobe.com/flashplayer/">Adobe Flash Player</a> to view this content.</p>
+			</div>
+		<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+</body></html>

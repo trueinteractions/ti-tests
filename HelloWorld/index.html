@@ -1,0 +1,47 @@
+<html>
+<head>
+	<style>
+		* {
+			font-family:Lucida Grande, Segoe UI;
+			background-color:rgba(0,0,0,0);
+		}
+	</style>
+	<script type="text/javascript">
+		function removeFromDock() {
+			var tiwin = TIWindow.getFromDOMWindow({domwindow:window});
+			tiwin.setShowInTaskbar({show:false});
+		}
+		function showFromDock() {
+			var tiwin = TIWindow.getFromDOMWindow({domwindow:window});
+			tiwin.setShowInTaskbar({show:true});
+		}
+		function attachMenuWithoutQuit() {
+			var topmenu = Menu.create({type:'menubar'});
+			var appleMenu = Menu.create();
+			var editMenu = Menu.create();
+			var windowMenu = Menu.create();
+	
+			appleMenu.appendItem({menuitem:new MenuItem({ label:'About Tint Compiler', selector:'orderFrontStandardAboutPanel', keymodifier:'' })});
+			appleMenu.appendItem({menuitem:new MenuItem({ type:'separator' })});
+			appleMenu.appendItem({menuitem:new MenuItem({ label:'Hide Tint Compiler', selector:'hide', keymodifier:'h' })});
+			appleMenu.appendItem({menuitem:new MenuItem({ label:'Hide Others', selector:'hideOtherApplications', keymodifier:'H' })});
+			appleMenu.appendItem({menuitem:new MenuItem({ label:'Show All', selector:'unhideAllApplications', keymodifier:'' })});
+			// appleMenu.appendItem({menuitem:new MenuItem({ label:'Quit Tint Compiler', keymodifier:'q', onclick:quit })});
+
+			topmenu.appendItem({menuitem:new MenuItem({label:'', submenu:appleMenu})});
+			topmenu.appendItem({menuitem:new MenuItem({label:'Edit', submenu:editMenu})});
+			topmenu.appendItem({menuitem:new MenuItem({label:'Window', submenu:windowMenu})});
+			var tiwin = TIWindow.getFromDOMWindow({domwindow:window});
+			tiwin.setMenu({menu:topmenu});
+		}
+	</script>
+</head>
+<body>
+	Hello World!<br>
+	<input type="button" onclick="TIWindow.getFromDOMWindow({domwindow:window}).showDebugWindow();" value="Debug" />
+	<input type="button" value="Remove From Dock" onclick="removeFromDock();"/>
+	<input type="button" value="Show In Dock" onclick="showFromDock();"/>
+	<input type="button" value="Remove Quit Keymodifier" onclick="attachMenuWithoutQuit();"/>
+
+</body>
+</html>

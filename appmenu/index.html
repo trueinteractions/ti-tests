@@ -1,0 +1,17 @@
+<html>
+<head>
+	<script type="text/javascript">
+	function run() {
+		var fileMenu = Menu.create();
+		fileMenu.appendItem({menuitem:new MenuItem({ label:'New', keymodifier:'n', onclick:function(e) { alert('new');}})});
+		fileMenu.appendItem({menuitem:new MenuItem({ label:'Open', keymodifier:'o', onclick:function(e) { alert('open');}})});
+
+		__nwgui.Window.get(window).setAppMenu(fileMenu.menuObj);
+	}
+	</script>
+</head>
+<body>
+	Hello World!<br>
+	<input type="button" onclick="run();" value="Debug" />
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript">
+	function tray1() {
+		var contextmenu = Menu.create();
+		contextmenu.appendItem({menuitem:new MenuItem({
+			label:'Item 1'
+		})});
+		contextmenu.appendItem({menuitem:new MenuItem({
+			label:'Item 2'
+		})});
+		contextmenu.appendItem({menuitem:new MenuItem({
+			label:'Item 3',
+			onclick:function() { alert('foo'); }
+		})});
+			
+		var tray = new Tray({
+			//title:'The tray title',
+			tooltip:'The tooltip',
+			icon:'icon.png',
+			menu:contextmenu
+		});
+	}
+	function tray2() {
+		var tray = new Tray({
+			title:'The tray title',
+			tooltip:'The tooltip',
+			icon:'icon.png',
+			click:function() { alert('clicked'); }
+		});
+	}
+	function tray3() {
+		
+	}
+	function tray4() {
+		
+	}
+</script>
+</head>
+<body>
+	The tray should allow both
+	<input type="button" value="Add a tray menu with onclick" onclick="tray1()"/>
+	<input type="button" value="Add a tray with onclick callback" onclick="tray2()" />
+	<input type="button" value="Add a tray with a right onclick callback" onclick="tray3()" />
+	<input type="button" value="Add a tray menu with a onrightclick" onclick="tray4()" />
+
+</body>
+</html>

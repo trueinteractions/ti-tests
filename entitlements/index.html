@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+	function saveDialog(directory, filename, whenFinished) {
+	                var selector = document.createElement("input");
+	                selector.style.display='none';
+	                selector.setAttribute('type','file');
+	                selector.setAttribute('id','filedialogsel');
+	                selector.setAttribute('nwworkingdir',directory);
+	                selector.setAttribute('nwsaveas',filename);
+	                selector.setAttribute('accept','.txt');
+	                selector.addEventListener("change", function(evt) {  whenFinished(selector.files); });
+	                document.body.appendChild(selector);
+	                selector.click();
+	}
+	function openDialog() {
+		saveDialog('/Users/tlinton/Documents/','report.txt' ,function(e) {
+			var fs = require('fs');
+			fs.writeFile(e[0].path, 'Hello World!', function (err) {
+  				if (err) return console.log(err);
+  				console.log('Hello World > '+e[0].path);
+			});
+		});
+	}
+	function openDialog2() {
+		var fs = require('fs');
+		fs.writeFile('/Users/tlinton/Documents/report-test.txt', 'Hello World!', function (err) {
+				if (err) return console.log(err);
+				console.log('Hello World > '+e[0].path);
+		});
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="Save On Dialog" onclick="openDialog();"/>
+	<input type="button" value="Save Should Fail" onclick="openDialog2();"/>
+
+</body>
+</html>

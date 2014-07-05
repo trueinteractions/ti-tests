@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		$.ajax({
+            url: "http://www.google.com",
+            type: "GET",
+            crossDomain: true,
+            success: function (response) {
+                //var resp = JSON.parse(response);
+                alert(response);
+            },
+            error: function (xhr, status) {
+                alert("error");
+            }
+        });
+    });
+    TIWindow.getFromDOMWindow({domwindow:window}).showDebugWindow();
+</script>
+</head>
+<body>
+<b>Test</b>
+</body>
+</html>

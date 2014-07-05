@@ -1,0 +1,35 @@
+<html>
+<head>
+	<style>
+		* {
+			font-family:Lucida Grande, Segoe UI;
+			background-color:rgba(0,0,0,0);
+		}
+	</style>
+	<script type="text/javascript">
+		function loadWindowIcon(iconpath) {
+			TIWindow.create({
+				url:'index.html', 
+				title:'True Interactions', 
+				width:800, 
+				height:600,
+				position:"center",
+				icon:iconpath
+			});
+		}
+	</script>
+</head>
+<body>
+	<p>/bg.jpg</p>
+	<p>bg.jpg</p>
+	<p>/icon.png</p>
+	<p>icon.png</p>
+	<p>ti.png</p>
+	<p>/ti.png</p>
+	<p>tintapi.png</p>
+	<p>/tintapi.png</p>
+	<input type="text" id="iconpath" value=""/>
+	<input type="button" value="Try Filesystem Icon" onclick="loadWindowIcon(document.getElementById('iconpath').value)"/>
+	
+</body>
+</html>

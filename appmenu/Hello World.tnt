@@ -1,0 +1,1 @@
+{"ApplicationId":1685246,"DisplayName":"Hello World","BundleName":"HelloWorld","IconPath":"icon.png","Namespace":"com.trueinteractions.example3","DisplayVersion":"1","BuildNumber":"1","Website":"http://www.none.com/","Copyright":"None","SourceDirectory":".","SourceExcludes":".DS_Store|Build|tnt","DestinationDirectory":"./Build","UserAgent":"Hello World App"}

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+	function openDialog() {
+		var selector = document.createElement("input");
+		selector.style.display='none';
+		selector.setAttribute('type','file');
+		selector.setAttribute('id','filedialogsel');
+		selector.setAttribute('nwworkingdir','/Users/trevorlinton/Documents/');
+		selector.setAttribute('nwsaveas','report.pdf');
+		selector.setAttribute('accept','.pdf');
+		document.body.appendChild(selector);
+		selector.click();
+	}
+	TIWindow.getFromDOMWindow({domwindow:window}).showDebugWindow();
+</script>
+</head>
+<body>
+	<input type="button" value="Open FileDialog" onclick="openDialog();"/>
+</body>
+</html>
